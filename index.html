@@ -55,62 +55,91 @@
 		<h1>Имя на канвасе</h1>
 	</div><!-- /header -->
 
-	<canvas id="myName" width="578" height="200"></canvas>
-    <script>
-      var canvas = document.getElementById('myName');
-      var context = canvas.getContext('2d');
+	<div data-role="page" id="camera" data-theme="a">
+         <div data-role="header" data-theme="d">
+		
+		</div>
+		<div data-role="main"> 
+		  <script type="text/javascript" charset="utf-8">
 
-      context.strokeStyle = "black";
-      context.lineWidth = 6;
-      context.beginPath();
+var pictureSource; // picture source
+var destinationType; // sets the format of returned value
+
+// Wait for device API libraries to load
+//
+document.addEventListener("deviceready",onDeviceReady,false);
+
+// device APIs are available
+//
+function onDeviceReady() {
+pictureSource=navigator.camera.PictureSourceType;
+destinationType=navigator.camera.DestinationType;
+}
+
+// Called when a photo is successfully retrieved
+//
+function onPhotoDataSuccess(imageData) {
+// Uncomment to view the base64-encoded image data
+// console.log(imageData);
+
+// Get image handle
+//
+var smallImage = document.getElementById('smallImage');
+
+// Unhide image elements
+//
+smallImage.style.display = 'block';
+
+// Show the captured photo
+// The inline CSS rules are used to resize the image
+//
+smallImage.src = "data:image/jpeg;base64," + imageData;
+}
+
+// Called when a photo is successfully retrieved
+//
+function onPhotoURISuccess(imageURI) {
+// Uncomment to view the image file URI
+// console.log(imageURI);
+
+// Get image handle
+//
+var largeImage = document.getElementById('largeImage');
+
+// Unhide image elements
+//
+largeImage.style.display = 'block';
+
+// Show the captured photo
+// The inline CSS rules are used to resize the image
+//
+largeImage.src = imageURI;
+}
+
+// A button will call this function
+//
+function capturePhoto() {
+// Take picture using device camera and retrieve image as base64-encoded string
+navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 50,
+destinationType: destinationType.DATA_URL });
+}
 
 
-      context.moveTo(100, 100);
-      context.lineTo(75, 175);
-      context.moveTo(100, 100);
-      context.lineTo(125, 175);
-      context.moveTo(55, 175);
-      context.lineTo(145, 175);
-      context.moveTo(55, 175);
-      context.lineTo(75, 195);
-      context.moveTo(145, 175);
-      context.lineTo(125, 195);      
-    
-      context.moveTo(155, 100);
-      context.lineTo(155, 175);
-      context.moveTo(155, 100);
-      context.lineTo(200, 100);
-      context.moveTo(200, 135);
-      context.lineTo(155, 135);
-      context.moveTo(200, 175);
-      context.lineTo(155,175);
 
-      context.moveTo(220, 100);
-      context.lineTo(220, 175);
-      context.moveTo(220, 140); 
-      context.lineTo(260, 140);
-      context.moveTo(260, 100);
-      context.lineTo(260, 175); 
+// Called if something bad happens.
+//
+function onFail(message) {
+alert('Failed because: ' + message);
+}
 
+</script>
 
-      context.moveTo(275, 100); 
-      context.lineTo(275, 175); 
-      context.moveTo(275, 170);
-      context.lineTo(320, 100); 
-      context.moveTo(320, 100);
-      context.lineTo(320, 175);
+<button onclick="capturePhoto();">Capture Photo</button> 
 
-      context.moveTo(380, 100);
-      context.lineTo(335, 100);
-      context.moveTo(335, 100);
-      context.lineTo(335, 175);
-      context.moveTo(335, 175);
-      context.lineTo(380, 175);
-      
-      context.stroke();
-    </script>
-	
-	</div><!-- /content -->
+<img style="display:none;width:60px;height:60px;" id="smallImage" src="" />
+<img style="display:none;" id="largeImage" src="" />
+
+            </div>
 
 </div><!-- /page -->
 
