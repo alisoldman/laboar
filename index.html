@@ -13,6 +13,13 @@
 
 <script src="jqm.js"></script>
 <script src="jquery.mobile-1.4.2.js"></script>
+
+<script type="text/javascript" src="jqm.js"> </script>
+	<script type="text/javascript" src="jquery.mobile-1.4.2.js"> </script>
+	<link rel="stylesheet" href="jquery.mobile-1.4.2.css" />
+	<link rel="stylesheet" href="themes/Bootstrap.css" />
+	<link rel="stylesheet" href="themes/Bootstrap.min.css" />
+	<script type="text/javascript" src="phonegap.js"></script>
         
 </head>
 <body>
@@ -43,6 +50,7 @@
 	<div data-role="footer">
 		<a href="#p2" class="ui-btn ui-corner-all ui-shadow ui-mini">Часть 2</a>
 		<a href="#p3" class="ui-btn ui-corner-all ui-shadow ui-mini">Часть 3</a>
+		<a href="#camera" data-transition="slide" data-icon="arrow-r" style="float:right;">Камера</a>
 	</div><!-- /footer -->
 </div><!-- /page -->
 
@@ -55,7 +63,71 @@
 		<h1>Имя на канвасе</h1>
 	</div><!-- /header -->
 
-	<div data-role="page" id="camera" data-theme="a">
+</div><!-- /page -->
+
+
+<!-- page2==================================================================================================================== -->
+<div data-role="page" data-theme="a" id="p2">
+
+	<div data-role="header">
+
+	<div data-role="navbar">
+		<ul>
+			<li><a href="#p1">Назад в будущее</a></li>
+			<li><a href="#">Назад в будущее. Часть 2.</a></li>
+			<li><a href="#p3">Назад в будущее. Часть 3.</a></li>
+		</ul>
+	</div><!-- /navbar -->
+	<div class="text">
+<p>Фильм снят в 1989 году режиссёром Робертом Земекисом. Успешно справившись со всеми трудностями, Марти возвращается домой, в 1985 год. Но неожиданное появление Дока заставляет юношу рассказать его подружке Дженнифер о существовании машины времени — героям приходится отправиться в 2015 год, чтобы спасти своих будущих детей от тюрьмы. Между тем старик Бифф Таннен узнаёт о существовании машины времени, угоняет её и изменяет собственную судьбу, превращая себя в одного из самых богатых людей Америки. Остальной же мир становится настоящим кошмаром, в котором отец Марти убит, а Док признан сумасшедшим. Док и Марти отправляются в прошлое, чтобы помешать Биффу из будущего изменить настоящее. По странному стечению обстоятельств, вернуться им предстоит все в тот же 1955 год. После удачного исхода их миссии в машину времени с находящимся в ней Доком случайно ударяет молния, и Док отправляется в 1885 год….</p></div>
+		<p style="text-align: center"><img src="images/2.png"></p>
+	</div><!-- /header -->
+<div role="main" class="ui-content">
+        <a href="#dialog"  class="ui-btn ui-corner-all ui-shadow ui-mini "> Имя на канвасе </a>
+	</div><!-- /content -->
+	<div role="main" class="ui-content">
+        
+	</div><!-- /content -->
+
+	<div data-role="footer">
+		<a href="#p1" class="ui-btn ui-corner-all ui-shadow ui-mini">Часть 1</a>
+		<a href="#p3" class="ui-btn ui-corner-all ui-shadow ui-mini">Часть 3</a>
+		<a href="#camera" data-transition="slide" data-icon="arrow-r" style="float:right;">Камера</a>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+<!-- page3==================================================================================================================== -->
+<div data-role="page" data-theme="a" id="p3">
+
+	<div data-role="header">
+
+	<div data-role="navbar">
+		<ul>
+			<li><a href="#p1">Назад в будущее</a></li>
+			<li><a href="#p2">Назад в будущее. Часть 2.</a></li>
+			<li><a href="#">Назад в будущее. Часть 3.</a></li>
+		</ul>
+	</div><!-- /navbar -->
+<div class="text">
+<p>Фильм снят в 1990 году режиссёром Робертом Земекисом. Оставшийся в 1955 году Марти Макфлай ищет машину времени, оставленную Доком в 1885 году. Случайно он узнает, что в 1885 году Док был убит бандитом Бьюффордом Танненом за долг в 80$. Марти отправляется в прошлое, в 1885 год, на Дикий Запад, чтобы спасти своего друга. Но кто же знал, что именно здесь пожилой учёный впервые в жизни влюбится в очаровательную учительницу Клару Клейтон, а возвращение домой станет невыполнимым заданием для двух путешественников во времени — после нападения индейцев DeLorean остаётся без топлива, которое ещё даже не изобрели. Однако, нет ничего немыслимого для смекалистого Марти и гениального Дока, решивших придать ускорение DeLorean, поставив машину на рельсы впереди несущегося к пропасти локомотива…</p></div>
+		<p style="text-align: center"><img src="images/3.png"></p>
+	</div><!-- /header -->
+<div role="main" class="ui-content">
+        <a href="#dialog"  class="ui-btn ui-corner-all ui-shadow ui-mini "> Имя на канвасе </a>
+	</div><!-- /content -->
+	<div role="main" class="ui-content">
+        
+	</div><!-- /content -->
+
+	<div data-role="footer">
+		<a href="#p1" class="ui-btn ui-corner-all ui-shadow ui-mini">Часть 1</a>
+		<a href="#p2" class="ui-btn ui-corner-all ui-shadow ui-mini">Часть 2</a>
+		<a href="#camera" data-transition="slide" data-icon="arrow-r" style="float:right;">Камера</a>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+
+<div data-role="page" id="camera" data-theme="a">
          <div data-role="header" data-theme="d">
 		
 		</div>
@@ -140,66 +212,9 @@ alert('Failed because: ' + message);
 <img style="display:none;" id="largeImage" src="" />
 
             </div>
-
-</div><!-- /page -->
-
-
-<!-- page2==================================================================================================================== -->
-<div data-role="page" data-theme="a" id="p2">
-
-	<div data-role="header">
-
-	<div data-role="navbar">
-		<ul>
-			<li><a href="#p1">Назад в будущее</a></li>
-			<li><a href="#">Назад в будущее. Часть 2.</a></li>
-			<li><a href="#p3">Назад в будущее. Часть 3.</a></li>
-		</ul>
-	</div><!-- /navbar -->
-	<div class="text">
-<p>Фильм снят в 1989 году режиссёром Робертом Земекисом. Успешно справившись со всеми трудностями, Марти возвращается домой, в 1985 год. Но неожиданное появление Дока заставляет юношу рассказать его подружке Дженнифер о существовании машины времени — героям приходится отправиться в 2015 год, чтобы спасти своих будущих детей от тюрьмы. Между тем старик Бифф Таннен узнаёт о существовании машины времени, угоняет её и изменяет собственную судьбу, превращая себя в одного из самых богатых людей Америки. Остальной же мир становится настоящим кошмаром, в котором отец Марти убит, а Док признан сумасшедшим. Док и Марти отправляются в прошлое, чтобы помешать Биффу из будущего изменить настоящее. По странному стечению обстоятельств, вернуться им предстоит все в тот же 1955 год. После удачного исхода их миссии в машину времени с находящимся в ней Доком случайно ударяет молния, и Док отправляется в 1885 год….</p></div>
-		<p style="text-align: center"><img src="images/2.png"></p>
-	</div><!-- /header -->
-<div role="main" class="ui-content">
-        <a href="#dialog"  class="ui-btn ui-corner-all ui-shadow ui-mini "> Имя на канвасе </a>
-	</div><!-- /content -->
-	<div role="main" class="ui-content">
-        
-	</div><!-- /content -->
-
-	<div data-role="footer">
-		<a href="#p1" class="ui-btn ui-corner-all ui-shadow ui-mini">Часть 1</a>
-		<a href="#p3" class="ui-btn ui-corner-all ui-shadow ui-mini">Часть 3</a>
-	</div><!-- /footer -->
-</div><!-- /page -->
-
-<!-- page3==================================================================================================================== -->
-<div data-role="page" data-theme="a" id="p3">
-
-	<div data-role="header">
-
-	<div data-role="navbar">
-		<ul>
-			<li><a href="#p1">Назад в будущее</a></li>
-			<li><a href="#p2">Назад в будущее. Часть 2.</a></li>
-			<li><a href="#">Назад в будущее. Часть 3.</a></li>
-		</ul>
-	</div><!-- /navbar -->
-<div class="text">
-<p>Фильм снят в 1990 году режиссёром Робертом Земекисом. Оставшийся в 1955 году Марти Макфлай ищет машину времени, оставленную Доком в 1885 году. Случайно он узнает, что в 1885 году Док был убит бандитом Бьюффордом Танненом за долг в 80$. Марти отправляется в прошлое, в 1885 год, на Дикий Запад, чтобы спасти своего друга. Но кто же знал, что именно здесь пожилой учёный впервые в жизни влюбится в очаровательную учительницу Клару Клейтон, а возвращение домой станет невыполнимым заданием для двух путешественников во времени — после нападения индейцев DeLorean остаётся без топлива, которое ещё даже не изобрели. Однако, нет ничего немыслимого для смекалистого Марти и гениального Дока, решивших придать ускорение DeLorean, поставив машину на рельсы впереди несущегося к пропасти локомотива…</p></div>
-		<p style="text-align: center"><img src="images/3.png"></p>
-	</div><!-- /header -->
-<div role="main" class="ui-content">
-        <a href="#dialog"  class="ui-btn ui-corner-all ui-shadow ui-mini "> Имя на канвасе </a>
-	</div><!-- /content -->
-	<div role="main" class="ui-content">
-        
-	</div><!-- /content -->
-
-	<div data-role="footer">
-		<a href="#p1" class="ui-btn ui-corner-all ui-shadow ui-mini">Часть 1</a>
-		<a href="#p2" class="ui-btn ui-corner-all ui-shadow ui-mini">Часть 2</a>
-	</div><!-- /footer -->
-</div><!-- /page -->
+            <div data-role="header">
+				<a href="#p1" data-role="button" class="ui-btn-inline" data-icon="arrow-r" data-transition="slide">К началу </a>
+				</div>
+			</div>
 </body>
 </html>
